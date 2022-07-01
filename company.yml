@@ -1,0 +1,41 @@
+paths:
+  /api/v1.0/market/company/register:
+    post:
+      summary: Register new company
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: 'company'
+          description: 'Register Company'
+          required: true
+          schema:
+            $ref: '#/definitions/Company'
+      responses:
+        '200':
+          description: creation OK
+        '400':
+            description: Bad Request
+        '500':
+            description: Internal Server Error
+definitions: 
+    Company: 
+        type: object
+        required:
+          - companyCode
+          - companyName
+          - fromDate
+          - toDate
+        properties:
+            companyCode:
+                type: string
+                description: Unique identifier representing a Company Code
+            companyName:
+                type: string
+                description: Unique identifier representing a Company Name
+            fromDate:
+                type: string
+                description: Unique identifier representing a From Date
+            toDate:
+                type: string
+                description: Unique identifier representing a To Date           
