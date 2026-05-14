@@ -1,0 +1,48 @@
+{
+  "repo": "Saravanan1689/python-backend",
+  "branch": "main",
+  "total_files": 10,
+  "status": "full",
+  "files": {
+    ".project": {
+      "sha": "17f5ccdb088ceaef4420cb5e792ac617e30e96b9",
+      "summary": "PROJECT file: .project - contains tests (path: .project)"
+    },
+    ".pydevproject": {
+      "sha": "98ee0df2f85664e3e0e5c18d1cd6ca04fcec1645",
+      "summary": "PYDEVPROJECT file: .pydevproject - configuration file (path: .pydevproject)"
+    },
+    "README.md": {
+      "sha": "5cd844899cbd2946ecc4f0b563b5863d868876bb",
+      "summary": "Markdown docs file: README.md (path: README.md)"
+    },
+    "app.py": {
+      "sha": "53875b521ead4312f0cb1b0e0f3e12cc773f0bc0",
+      "summary": "Python file: app.py - module with dependencies, configuration file (path: app.py)"
+    },
+    "company.py": {
+      "sha": "fe78dc72a03632cc4d5d131d089b5601541efc4e",
+      "summary": "Python file: company.py - module with dependencies, configuration file (path: company.py)"
+    },
+    "company.yml": {
+      "sha": "92783dfb850fd442bcdb3227f24b96eff8ca0da2",
+      "summary": "YAML config file: company.yml - defines data models (path: company.yml)"
+    },
+    "database.yaml": {
+      "sha": "419acf897cdbdd176dd5d03d35459935a1c234f3",
+      "summary": "YAML config file: database.yaml (path: database.yaml)"
+    },
+    "hello.yml": {
+      "sha": "622b1f2fba498d592bd41ee403d914ea24b5289e",
+      "summary": "YAML config file: hello.yml - defines data models, contains tests (path: hello.yml)"
+    },
+    "python-flask-app.log": {
+      "sha": "a9d527052532198429ac49bc513cc655a847107d",
+      "summary": "LOG file: python-flask-app.log (path: python-flask-app.log)"
+    },
+    "stock.py": {
+      "sha": "6c6ac119acc3ed3e38d7b42b0a8c2ac43caa3a13",
+      "summary": "Python file: stock.py - module with dependencies (path: stock.py)"
+    }
+  }
+}
