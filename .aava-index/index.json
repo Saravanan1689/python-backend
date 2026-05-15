@@ -1,0 +1,234 @@
+{
+  "repo": "Saravanan1689/python-backend",
+  "branch": "main",
+  "total_files": 8,
+  "status": "full",
+  "files": {
+    "README.md": {
+      "summary": "Markdown docs: README.md (path: README.md)",
+      "catalog_line": "Markdown docs: README.md (path: README.md)",
+      "sha": "5cd844899cbd2946ecc4f0b563b5863d868876bb",
+      "ext": "md"
+    },
+    "app.py": {
+      "summary": "Python: app.py [defines classes/functions, API routing, tests] - defines: index, data (path: app.py)",
+      "language": "python",
+      "classes": [],
+      "functions": [
+        {
+          "name": "index",
+          "sig": "()",
+          "decorators": [
+            "@swag_from(\"hello.yml\")",
+            "@app.route('/')"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "data",
+          "sig": "()",
+          "decorators": [
+            "@app.route('/users', methods=['POST', 'GET'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "onedata",
+          "sig": "(id)",
+          "decorators": [
+            "@app.route('/users/<string:id>', methods=['GET', 'DELETE', 'PUT'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "redis_available",
+          "sig": "()",
+          "decorators": [],
+          "is_private": false
+        },
+        {
+          "name": "application_data",
+          "sig": "()",
+          "decorators": [],
+          "is_private": false
+        }
+      ],
+      "imports_internal": [
+        "bson.objectid",
+        "flask_cors",
+        "healthcheck",
+        "company",
+        "stock",
+        "flasgger",
+        "pymongo"
+      ],
+      "imports_external": [
+        "flask"
+      ],
+      "exceptions_raised": [],
+      "routes": [
+        "@app.route('/')",
+        "@app.route('/users', methods=['POST', 'GET'])",
+        "@app.route('/users/<string:id>', methods=['GET', 'DELETE', 'PUT'])"
+      ],
+      "test_file": false,
+      "catalog_line": "Python: app.py [defines classes/functions, API routing, tests] - defines: index, data (path: app.py) | functions: index, data, onedata, redis_available, application_data | routes: app.route, app.route, app.route | imports: bson.objectid, flask_cors, healthcheck, company",
+      "sha": "53875b521ead4312f0cb1b0e0f3e12cc773f0bc0",
+      "ext": "py"
+    },
+    "company.py": {
+      "summary": "Python: company.py [defines classes/functions, API routing, configuration] - defines: post_company (path: company.py)",
+      "language": "python",
+      "classes": [],
+      "functions": [
+        {
+          "name": "post_company",
+          "sig": "()",
+          "decorators": [
+            "@swag_from(\"company.yml\", methods=['POST'])",
+            "@company_bp.route('/register', methods=['POST'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "get_company_by_company_code",
+          "sig": "(companycode)",
+          "decorators": [
+            "@company_bp.route('/info/<string:companycode>', methods=['GET'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "get_all_company_data",
+          "sig": "()",
+          "decorators": [
+            "@company_bp.route('/getall', methods=['GET'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "disable_company",
+          "sig": "(companycode)",
+          "decorators": [
+            "@company_bp.route('/disable/<string:companycode>', methods=['GET'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "delete_company",
+          "sig": "(companycode)",
+          "decorators": [
+            "@company_bp.route('/delete/<string:companycode>', methods=['DELETE'])"
+          ],
+          "is_private": false
+        }
+      ],
+      "imports_internal": [
+        "bson.objectid",
+        "flask_cors",
+        "flasgger",
+        "pymongo"
+      ],
+      "imports_external": [
+        "flask"
+      ],
+      "exceptions_raised": [],
+      "routes": [
+        "@company_bp.route('/register', methods=['POST'])",
+        "@company_bp.route('/info/<string:companycode>', methods=['GET'])",
+        "@company_bp.route('/getall', methods=['GET'])",
+        "@company_bp.route('/disable/<string:companycode>', methods=['GET'])",
+        "@company_bp.route('/delete/<string:companycode>', methods=['DELETE'])"
+      ],
+      "test_file": false,
+      "catalog_line": "Python: company.py [defines classes/functions, API routing, configuration] - defines: post_company (path: company.py) | functions: post_company, get_company_by_company_code, get_all_company_data, disable_company, delete_company | routes: company_bp.route, company_bp.route, company_bp.route | imports: bson.objectid, flask_cors, flasgger, pymongo",
+      "sha": "fe78dc72a03632cc4d5d131d089b5601541efc4e",
+      "ext": "py"
+    },
+    "company.yml": {
+      "summary": "YAML config: company.yml [data models] (path: company.yml)",
+      "catalog_line": "YAML config: company.yml [data models] (path: company.yml)",
+      "sha": "92783dfb850fd442bcdb3227f24b96eff8ca0da2",
+      "ext": "yml"
+    },
+    "database.yaml": {
+      "summary": "YAML config: database.yaml (path: database.yaml)",
+      "catalog_line": "YAML config: database.yaml (path: database.yaml)",
+      "sha": "419acf897cdbdd176dd5d03d35459935a1c234f3",
+      "ext": "yaml"
+    },
+    "hello.yml": {
+      "summary": "YAML config: hello.yml [data models, tests] (path: hello.yml)",
+      "catalog_line": "YAML config: hello.yml [data models, tests] (path: hello.yml)",
+      "sha": "622b1f2fba498d592bd41ee403d914ea24b5289e",
+      "ext": "yml"
+    },
+    "python-flask-app.log": {
+      "summary": "LOG: python-flask-app.log (path: python-flask-app.log)",
+      "catalog_line": "LOG: python-flask-app.log (path: python-flask-app.log)",
+      "sha": "a9d527052532198429ac49bc513cc655a847107d",
+      "ext": "log"
+    },
+    "stock.py": {
+      "summary": "Python: stock.py [defines classes/functions, API routing, configuration] - defines: add_stock, get_company_by_company_code (path: stock.py)",
+      "language": "python",
+      "classes": [],
+      "functions": [
+        {
+          "name": "add_stock",
+          "sig": "(companycode)",
+          "decorators": [
+            "@stock_bp.route('/add/<string:companycode>', methods=['POST'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "get_company_by_company_code",
+          "sig": "(companycode,startdate,enddate)",
+          "decorators": [
+            "@stock_bp.route('/get/<string:companycode>/<string:startdate>/<string:enddate>', methods=['GET'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "upload",
+          "sig": "(file_name)",
+          "decorators": [
+            "@stock_bp.route('/upload/<file_name>', methods=['PUT'])"
+          ],
+          "is_private": false
+        },
+        {
+          "name": "index",
+          "sig": "(file_name)",
+          "decorators": [
+            "@stock_bp.route('/download/<file_name>')"
+          ],
+          "is_private": false
+        }
+      ],
+      "imports_internal": [
+        "bson.objectid",
+        "flask_cors",
+        "flasgger",
+        "gridfs",
+        "pymongo"
+      ],
+      "imports_external": [
+        "flask",
+        "flask.json"
+      ],
+      "exceptions_raised": [],
+      "routes": [
+        "@stock_bp.route('/add/<string:companycode>', methods=['POST'])",
+        "@stock_bp.route('/get/<string:companycode>/<string:startdate>/<string:enddate>', methods=['GET'])",
+        "@stock_bp.route('/upload/<file_name>', methods=['PUT'])",
+        "@stock_bp.route('/download/<file_name>')"
+      ],
+      "test_file": false,
+      "catalog_line": "Python: stock.py [defines classes/functions, API routing, configuration] - defines: add_stock, get_company_by_company_code (path: stock.py) | functions: add_stock, get_company_by_company_code, upload, index | routes: stock_bp.route, stock_bp.route, stock_bp.route | imports: bson.objectid, flask_cors, flasgger, gridfs",
+      "sha": "6c6ac119acc3ed3e38d7b42b0a8c2ac43caa3a13",
+      "ext": "py"
+    }
+  }
+}
